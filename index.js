@@ -29,7 +29,7 @@ MongoClient.connect(
   options,
   (err, database) => {
     if (err) {
-      console.log(`FATAL MONGODB CONNECTION ERROR: ${err}:$P{err.stack}`);
+      console.log(`FATAL MONGODB CONNNECTION ERROR: ${err}:$P{err.stack}`);
       process.exit(1);
     }
     app.locals.db = database.db('api');
