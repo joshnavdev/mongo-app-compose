@@ -1,0 +1,23 @@
+{
+  "name": "mongo-app-compose",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Joshua Navarro <joshua.navarro35@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "docker-compose -f docker/docker-compose.test.yml up --build --abort-on-container-exit",
+    "production": "docker-compose -f docker/docker-compose.test.yml up -d",
+    "build": "docker-compose -f docker/docker-compose.yml build"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.12"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "supertest": "^3.4.1",
+    "tape": "^4.9.2"
+  }
+}
