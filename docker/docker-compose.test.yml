@@ -8,7 +8,7 @@ services:
         port: ${PORT}
     env_file:
       - ../.env
-    environments:
+    environment:
       WAIT_HOSTS: database-test:27017
   database-test:
     image: mongo:4.0
